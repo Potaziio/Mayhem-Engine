@@ -1,0 +1,630 @@
+The system is: Linux - 5.15.2-arch1-1 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/3.21.4/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e87c2/fast && /usr/bin/make  -f CMakeFiles/cmTC_e87c2.dir/build.make CMakeFiles/cmTC_e87c2.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.21/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+Target: x86_64-pc-linux-gnu
+Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++,d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e87c2.dir/'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/cc1 -quiet -v /usr/share/cmake-3.21/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e87c2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccpXlXuu.s
+GNU C17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 11.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 11.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 3d0ac5c030c008e73f10e8b66957dbfa
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e87c2.dir/'
+ as -v --64 -o CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o /tmp/ccpXlXuu.s
+GNU assembler version 2.36.1 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.36.1
+COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_e87c2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e87c2.dir/link.txt --verbose=1
+/usr/bin/cc  -v CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o -o cmTC_e87c2 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++,d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.1.0 (GCC) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e87c2' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e87c2.'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc51bwuK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e87c2 /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../.. CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e87c2' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e87c2.'
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include]
+    add: [/usr/local/include]
+    add: [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include;/usr/local/include;/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_e87c2/fast && /usr/bin/make  -f CMakeFiles/cmTC_e87c2.dir/build.make CMakeFiles/cmTC_e87c2.dir/build]
+  ignore line: [make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.21/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c c++ ada fortran go lto objc obj-c++ d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e87c2.dir/']
+  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/cc1 -quiet -v /usr/share/cmake-3.21/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e87c2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccpXlXuu.s]
+  ignore line: [GNU C17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 3d0ac5c030c008e73f10e8b66957dbfa]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e87c2.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o /tmp/ccpXlXuu.s]
+  ignore line: [GNU assembler version 2.36.1 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.36.1]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_e87c2]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e87c2.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o -o cmTC_e87c2 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c c++ ada fortran go lto objc obj-c++ d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e87c2' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e87c2.']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc51bwuK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e87c2 /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../.. CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc51bwuK.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_e87c2] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../..]
+    arg [CMakeFiles/cmTC_e87c2.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o]
+  collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
+  collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
+  collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o] ==> [/usr/lib/crtn.o]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/usr/lib/Scrt1.o;/usr/lib/crti.o;/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o;/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o;/usr/lib/crtn.o]
+  implicit dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0;/usr/lib;/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0771c/fast && /usr/bin/make  -f CMakeFiles/cmTC_0771c.dir/build.make CMakeFiles/cmTC_0771c.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0771c.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_0771c.dir/CheckIncludeFile.c.o -c /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_0771c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0771c.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_0771c.dir/CheckIncludeFile.c.o -o cmTC_0771c 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_015ca/fast && /usr/bin/make  -f CMakeFiles/cmTC_015ca.dir/build.make CMakeFiles/cmTC_015ca.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_015ca.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_015ca.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_015ca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_015ca.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_015ca.dir/CheckFunctionExists.c.o -o cmTC_015ca  -lpthread 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib/libX11.so;/usr/lib/libXext.so passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_98078/fast && /usr/bin/make  -f CMakeFiles/cmTC_98078.dir/build.make CMakeFiles/cmTC_98078.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_98078.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_98078.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_98078
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98078.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_98078.dir/CheckFunctionExists.c.o -o cmTC_98078  /usr/lib/libX11.so /usr/lib/libXext.so 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b859b/fast && /usr/bin/make  -f CMakeFiles/cmTC_b859b.dir/build.make CMakeFiles/cmTC_b859b.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b859b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_b859b.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b859b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b859b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_b859b.dir/CheckFunctionExists.c.o -o cmTC_b859b 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_33200/fast && /usr/bin/make  -f CMakeFiles/cmTC_33200.dir/build.make CMakeFiles/cmTC_33200.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_33200.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_33200.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_33200
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33200.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_33200.dir/CheckFunctionExists.c.o -o cmTC_33200 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2bd83/fast && /usr/bin/make  -f CMakeFiles/cmTC_2bd83.dir/build.make CMakeFiles/cmTC_2bd83.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2bd83.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_2bd83.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2bd83
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bd83.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_2bd83.dir/CheckFunctionExists.c.o -o cmTC_2bd83 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_baf1c/fast && /usr/bin/make  -f CMakeFiles/cmTC_baf1c.dir/build.make CMakeFiles/cmTC_baf1c.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_baf1c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_baf1c.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_baf1c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_baf1c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_baf1c.dir/CheckFunctionExists.c.o -o cmTC_baf1c 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a82d8/fast && /usr/bin/make  -f CMakeFiles/cmTC_a82d8.dir/build.make CMakeFiles/cmTC_a82d8.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a82d8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_a82d8.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a82d8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a82d8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_a82d8.dir/CheckFunctionExists.c.o -o cmTC_a82d8  -lICE 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/c-code/opengl-practice/include/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+The system is: Linux - 5.15.3-arch1-1 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/3.22.0/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_01897/fast && /usr/bin/make  -f CMakeFiles/cmTC_01897.dir/build.make CMakeFiles/cmTC_01897.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+Target: x86_64-pc-linux-gnu
+Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++,d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01897.dir/'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/cc1 -quiet -v /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_01897.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccBmY0JP.s
+GNU C17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 11.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 11.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 3d0ac5c030c008e73f10e8b66957dbfa
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01897.dir/'
+ as -v --64 -o CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o /tmp/ccBmY0JP.s
+GNU assembler version 2.36.1 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.36.1
+COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_01897
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01897.dir/link.txt --verbose=1
+/usr/bin/cc  -v CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o -o cmTC_01897 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++,d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.1.0 (GCC) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_01897' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_01897.'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccofueKn.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_01897 /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../.. CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_01897' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_01897.'
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include]
+    add: [/usr/local/include]
+    add: [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include;/usr/local/include;/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_01897/fast && /usr/bin/make  -f CMakeFiles/cmTC_01897.dir/build.make CMakeFiles/cmTC_01897.dir/build]
+  ignore line: [make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c c++ ada fortran go lto objc obj-c++ d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01897.dir/']
+  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/cc1 -quiet -v /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_01897.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccBmY0JP.s]
+  ignore line: [GNU C17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 3d0ac5c030c008e73f10e8b66957dbfa]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01897.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o /tmp/ccBmY0JP.s]
+  ignore line: [GNU assembler version 2.36.1 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.36.1]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_01897]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01897.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o -o cmTC_01897 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c c++ ada fortran go lto objc obj-c++ d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_01897' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_01897.']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccofueKn.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_01897 /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../.. CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccofueKn.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_01897] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../..]
+    arg [CMakeFiles/cmTC_01897.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o]
+  collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
+  collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
+  collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib/crtn.o] ==> [/usr/lib/crtn.o]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/usr/lib/Scrt1.o;/usr/lib/crti.o;/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtbeginS.o;/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/crtendS.o;/usr/lib/crtn.o]
+  implicit dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0;/usr/lib;/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e2b20/fast && /usr/bin/make  -f CMakeFiles/cmTC_e2b20.dir/build.make CMakeFiles/cmTC_e2b20.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e2b20.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e2b20.dir/CheckIncludeFile.c.o -c /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e2b20
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2b20.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_e2b20.dir/CheckIncludeFile.c.o -o cmTC_e2b20 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e2404/fast && /usr/bin/make  -f CMakeFiles/cmTC_e2404.dir/build.make CMakeFiles/cmTC_e2404.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e2404.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_e2404.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e2404
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2404.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_e2404.dir/CheckFunctionExists.c.o -o cmTC_e2404  -lpthread 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib/libX11.so;/usr/lib/libXext.so passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ca94f/fast && /usr/bin/make  -f CMakeFiles/cmTC_ca94f.dir/build.make CMakeFiles/cmTC_ca94f.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca94f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_ca94f.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ca94f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca94f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_ca94f.dir/CheckFunctionExists.c.o -o cmTC_ca94f  /usr/lib/libX11.so /usr/lib/libXext.so 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f1e85/fast && /usr/bin/make  -f CMakeFiles/cmTC_f1e85.dir/build.make CMakeFiles/cmTC_f1e85.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f1e85.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_f1e85.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f1e85
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1e85.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_f1e85.dir/CheckFunctionExists.c.o -o cmTC_f1e85 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_38312/fast && /usr/bin/make  -f CMakeFiles/cmTC_38312.dir/build.make CMakeFiles/cmTC_38312.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38312.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_38312.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_38312
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38312.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_38312.dir/CheckFunctionExists.c.o -o cmTC_38312 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5ee12/fast && /usr/bin/make  -f CMakeFiles/cmTC_5ee12.dir/build.make CMakeFiles/cmTC_5ee12.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ee12.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_5ee12.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5ee12
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ee12.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_5ee12.dir/CheckFunctionExists.c.o -o cmTC_5ee12 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2bc9e/fast && /usr/bin/make  -f CMakeFiles/cmTC_2bc9e.dir/build.make CMakeFiles/cmTC_2bc9e.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2bc9e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_2bc9e.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2bc9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bc9e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_2bc9e.dir/CheckFunctionExists.c.o -o cmTC_2bc9e 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_878a3/fast && /usr/bin/make  -f CMakeFiles/cmTC_878a3.dir/build.make CMakeFiles/cmTC_878a3.dir/build
+make[1]: Entering directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_878a3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_878a3.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_878a3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_878a3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_878a3.dir/CheckFunctionExists.c.o -o cmTC_878a3  -lICE 
+make[1]: Leaving directory '/home/potaziio-arch/Desktop/Coding/cpp-coding/2D-opengl-game/include/vendor/glfw-3.3.5/CMakeFiles/CMakeTmp'
+
+
+
