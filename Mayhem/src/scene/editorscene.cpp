@@ -1,19 +1,6 @@
 #include "EditorScene.hpp"
 
-Shader* shader = new Shader("../Mayhem/assets/shaders/defaultmesh.glsl");
-
-GameObject* player = new GameObject("Player");
-
 void Scenes::EditorScene::Start() {
-    shader->compile();
-    this->OrthoCamera = new OrthographicCamera(Vector3f(0.0f, 0.0f, 0.0f), 0.0f, 1600.0f, 1000.0f, 0.0f, 0.0f, 100.0f);
-
-    player->AddComponent(SpriteRenderer(shader, Vector4f(RGBANORM(255.0f, 0.0f, 0.0f, 255.0f))));
-
-
-    this->addGameObjectToScene(player);
-    this->addGameObjectToScene(OrthoCamera);
-
     std::cout << "On Editor Scene" << std::endl;
 }
 

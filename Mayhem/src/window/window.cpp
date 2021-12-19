@@ -4,6 +4,9 @@ void Mayhem::Window::WindowFramebufferSizeCallback(GLFWwindow* window, int width
     glViewport(0, 0, width, height);
     Mayhem::Window::width = width;
     Mayhem::Window::height = height;
+
+    currentScene->OrthoCamera->UpdateOrthoCameraBounds(-(float)width * 0.5f, (float)width * 0.5f,
+     -(float)height * 0.5f, (float)height * 0.5f, 0.0f, 100.0f);
 }
 
 void Mayhem::Window::changeScene(enum Scenes::Scene::SCENETYPE sceneType) {
@@ -75,7 +78,7 @@ Mayhem::Window::Window(const char* name, int width, int height) {
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 130");
 
-    changeScene(Scenes::Scene::EDITORSCENE);
+    changeScene(Scenes::Scene::RUNTIMESCENE);
 
     currentScene->onSceneStart();
 
@@ -88,31 +91,29 @@ Mayhem::Window::Window(const char* name, int width, int height) {
 }
 
 void Mayhem::Window::update() {
-    while(!glfwWindowShouldClose(Mayhem::Window::window)) {
+    while(!glfwWindowShouldClose(Mayhem::Window::window)) { 
         glfwPollEvents();
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         if (Mayhem::Input::KeyboardListener::GetKeyDown(GLFW_KEY_ESCAPE)) {
             std::cout << "Quitting..." << std::endl;
             exit(0);
         }
 
-        // Scene Updating
+        glClear(GL_COLOR_BUFFER_BIT);
 
         currentScene->Update();
         currentScene->GuiUpdate();
-
-        Utils::GUI::EditorGUI::onEditorGuiUpdate();
 
         if (currentScene->sceneType == Scenes::Scene::EDITORSCENE) {
             currentScene->onEditorUpdate();
         } else if (currentScene->sceneType == Scenes::Scene::RUNTIMESCENE) {
             currentScene->onRuntimeUpdate();
         }
+
+        Utils::GUI::EditorGUI::onEditorGuiUpdate();
 
         // ImGui rendering
 
@@ -129,6 +130,8 @@ void Mayhem::Window::update() {
 void Mayhem::Window::freeMemory() {
     currentScene->freeSceneMemory();
     delete currentScene;
+
+    glDeleteFramebuffers(1, &fbo);
 
     glfwTerminate();
     glfwDestroyWindow(Window::window);

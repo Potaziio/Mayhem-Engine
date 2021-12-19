@@ -12,6 +12,15 @@ Mayhem::ECS::OrthographicCamera::OrthographicCamera(Math::Vector3f pos, float xM
     viewMatrix = glm::lookAt(glm::vec3(pos.x, pos.y, pos.z), cameraFront + glm::vec3(pos.x, pos.y, pos.z), cameraUp);
 }
 
+void Mayhem::ECS::OrthographicCamera::UpdateOrthoCameraBounds(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax) {
+    this->xMin = xMin;
+    this->xMax = xMax;
+    this->yMin = yMin;
+    this->yMax = yMax;
+    this->zMin = zMin;
+    this->zMax = zMax;
+}
+
 glm::mat4 Mayhem::ECS::OrthographicCamera::GetViewMatrix() {
     Math::Vector3f pos = transform->position;
 

@@ -17,6 +17,13 @@
 #include "../util/MayhemUtil.hpp"
 #include "../gameobject/GameObject.hpp"
 
+#include "../util/Shader.hpp"
+
+#include "../camera/Camera.hpp"
+
+#include "../gameobject/components/Transform.hpp"
+#include "../gameobject/components/SpriteRenderer.hpp"
+
 #include "../../../include/vendor/imgui/imgui.h"
 #include "../../../include/vendor/imgui/imgui_impl_opengl3.h"
 #include "../../../include/vendor/imgui/imgui_impl_glfw.h"
@@ -28,6 +35,8 @@ class GameScene;
 using namespace Mayhem;
 using namespace Mayhem::Utils;
 using namespace Mayhem::ECS;
+using namespace Mayhem::ECS::Components;
+using namespace Mayhem::Math;
 
 namespace Mayhem {
     namespace Scenes {

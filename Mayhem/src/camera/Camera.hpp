@@ -28,6 +28,8 @@ namespace Mayhem {
 
                 OrthographicCamera(Math::Vector3f pos, float xMin, float xMax, float yMin, float yMax, float zMin, float zMax);
 
+                void UpdateOrthoCameraBounds(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax);
+
                 glm::mat4 GetViewMatrix();
                 glm::mat4 GetProjectionMatrix();
         };

@@ -1,5 +1,7 @@
 #include  "EditorGUI.hpp"
 
+static char holder[64];
+
 void Mayhem::Utils::GUI::EditorGUI::onEditorGuiUpdate() {
     if (Window::getCurrentScene()->sceneType != Scenes::Scene::EDITORSCENE) { return; }
 
@@ -33,7 +35,10 @@ void Mayhem::Utils::GUI::EditorGUI::onEditorGuiUpdate() {
 
                     ImVec2 buttonSize = {lineHeight + 3.0f, lineHeight};
 
+                    // Transform
+
                     ImGui::Text("Transform");
+                    ImGui::Text("Position");
                     ImGui::SameLine();
                     if (ImGui::Button("X", buttonSize))
                         go.second->transform->position.x = 0.0f;
@@ -57,6 +62,35 @@ void Mayhem::Utils::GUI::EditorGUI::onEditorGuiUpdate() {
                     ImGui::PushItemWidth(50);
                     ImGui::DragFloat("##Z", &go.second->transform->position.z, 0.1f);
                     ImGui::PopItemWidth();
+
+                    // Scale
+
+                    ImGui::Text("Scale");
+                    ImGui::SameLine();
+                    if (ImGui::Button("X", buttonSize))
+                        go.second->transform->scale.x = 0.0f;
+                    ImGui::SameLine();
+                    ImGui::PushItemWidth(50);
+                    ImGui::DragFloat("###X", &go.second->transform->scale.x, 0.1f);
+                    ImGui::PopItemWidth();
+                    ImGui::SameLine();
+
+                    if (ImGui::Button("Y", buttonSize))
+                        go.second->transform->scale.y = 0.0f;
+                    ImGui::SameLine();
+                    ImGui::PushItemWidth(50);
+                    ImGui::DragFloat("###Y", &go.second->transform->scale.y, 0.1f);
+                    ImGui::PopItemWidth();
+                    ImGui::SameLine();
+
+                    if (ImGui::Button("Z", buttonSize))
+                        go.second->transform->scale.z = 0.0f;
+                    ImGui::SameLine();
+                    ImGui::PushItemWidth(50);
+                    ImGui::DragFloat("###Z", &go.second->transform->scale.z, 0.1f);
+                    ImGui::PopItemWidth();
+
+                    // Sprite renderer
 
                     if (go.second->HasComponent<SpriteRenderer>()) {
                         ECS::Components::SpriteRenderer* spr = go.second->GetComponent<SpriteRenderer>();
@@ -97,12 +131,25 @@ void Mayhem::Utils::GUI::EditorGUI::onEditorGuiUpdate() {
 
                 }
 
+                if (ImGui::Button("Add SpriteRenderer")) {
+                    //go.second->AddComponent(SpriteRenderer(Window::getCurrentScene()->GetGameObject("Player")->GetComponent<SpriteRenderer>()->shader, Vector4f(1.0f, 0.0f, 0.0f, 1.0f)));
+                }
+
                 ImGui::TreePop();
 
             }
             ImGui::Spacing();
         }
     }
+
+    ImGui::NewLine();
+
+    // Adding GameObjects to scene
+
+    if (ImGui::InputText("Add Entity", holder, 64, ImGuiInputTextFlags_EnterReturnsTrue)) {
+        Window::getCurrentScene()->addGameObjectToScene(new GameObject((std::string)holder));
+    }
+
 
     ImGui::End();
 }

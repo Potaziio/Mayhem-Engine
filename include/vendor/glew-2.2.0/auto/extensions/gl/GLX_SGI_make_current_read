@@ -1,5 +1,5 @@
 GLX_SGI_make_current_read
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
+http://www.opengl.org/registry/specs/SGI/make_current_read.txt
 GLX_SGI_make_current_read
 
 	GLXDrawable glXGetCurrentReadDrawableSGI (void)
