@@ -18,7 +18,11 @@ namespace Mayhem {
                 glm::mat4 viewMatrix, projectionMatrix;
                 glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
                 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+
             public:
+                static float CameraBoundsX;
+                static float CameraBoundsY;
+
                 float xMin;
                 float xMax;
                 float yMin;
@@ -27,6 +31,9 @@ namespace Mayhem {
                 float zMax;
 
                 OrthographicCamera(Math::Vector3f pos, float xMin, float xMax, float yMin, float yMax, float zMin, float zMax);
+
+                Math::Vector3f ScreenToWorldPoint(Math::Vector3f point);
+                Math::Vector2f ScreenToWorldPoint(Math::Vector2f point);
 
                 void UpdateOrthoCameraBounds(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax);
 

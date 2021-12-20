@@ -28,9 +28,9 @@ float Mayhem::Input::KeyboardListener::GetAxisRaw(std::string axis) {
 
     if (axis == "Vertical") {
         if (GetKey(GLFW_KEY_W)) {
-            return -1.0f;
-        } else if (GetKey(GLFW_KEY_S)) {
             return 1.0f;
+        } else if (GetKey(GLFW_KEY_S)) {
+            return -1.0f;
         }
     }
 

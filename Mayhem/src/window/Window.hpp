@@ -16,6 +16,8 @@
 
 #include "../util/Time.hpp"
 
+#include "../camera/Camera.hpp"
+
 #include "../scene/Scene.hpp"
 #include "../scene/GameScene.hpp"
 #include "../scene/EditorScene.hpp"

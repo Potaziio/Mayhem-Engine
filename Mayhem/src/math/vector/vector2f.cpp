@@ -1,6 +1,8 @@
 #include "Vector2f.hpp"
 
 Mayhem::Math::Vector2f::Vector2f(float xPos, float yPos) :x(xPos), y(yPos) {}
+Mayhem::Math::Vector2f::Vector2f(float defVal): x(defVal), y(defVal) {}
+
 Mayhem::Math::Vector2f::Vector2f() :x(0.0f), y(0.0f) {}
 
 void Mayhem::Math::Vector2f::Print() {
@@ -13,6 +15,10 @@ Mayhem::Math::Vector2f Mayhem::Math::Vector2f::operator-(Vector2f vecToSubstract
 
 Mayhem::Math::Vector2f Mayhem::Math::Vector2f::operator*(float val) {
     return Vector2f(x * val, y * val);
+}
+
+Mayhem::Math::Vector2f Mayhem::Math::Vector2f::operator+(Vector2f vecToAdd) {
+    return Vector2f(x + vecToAdd.x, y + vecToAdd.y);
 }
 
 Mayhem::Math::Vector2f Mayhem::Math::Vector2f::operator*(Vector2f vecToMult) {
@@ -40,4 +46,8 @@ void Mayhem::Math::Vector2f::operator+=(Vector2f vecToAdd) {
 void Mayhem::Math::Vector2f::operator-=(Vector2f vecToSub) {
     x -= vecToSub.x;
     y -= vecToSub.y;
+}
+
+Mayhem::Math::Vector2f Mayhem::Math::Vector2f::Lerp(Vector2f source, Vector2f target, float speed) {
+    return source * (1.0f - speed) + target * speed; 
 }

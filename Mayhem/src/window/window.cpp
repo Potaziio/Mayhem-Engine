@@ -5,8 +5,10 @@ void Mayhem::Window::WindowFramebufferSizeCallback(GLFWwindow* window, int width
     Mayhem::Window::width = width;
     Mayhem::Window::height = height;
 
-    currentScene->OrthoCamera->UpdateOrthoCameraBounds(-(float)width * 0.5f, (float)width * 0.5f,
-     -(float)height * 0.5f, (float)height * 0.5f, 0.0f, 100.0f);
+    currentScene->OrthoCamera->UpdateOrthoCameraBounds(-(float)width * 0.5f, (float)width * 0.5f, (float)height * 0.5f, -(float)height * 0.5f, 0.0f, 100.0f);
+
+    OrthographicCamera::CameraBoundsX = width;
+    OrthographicCamera::CameraBoundsY = height;
 }
 
 void Mayhem::Window::changeScene(enum Scenes::Scene::SCENETYPE sceneType) {
@@ -130,8 +132,6 @@ void Mayhem::Window::update() {
 void Mayhem::Window::freeMemory() {
     currentScene->freeSceneMemory();
     delete currentScene;
-
-    glDeleteFramebuffers(1, &fbo);
 
     glfwTerminate();
     glfwDestroyWindow(Window::window);

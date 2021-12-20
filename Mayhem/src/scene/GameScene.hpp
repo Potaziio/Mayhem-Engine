@@ -17,6 +17,8 @@
 #include "../util/MayhemUtil.hpp"
 #include "../gameobject/GameObject.hpp"
 
+#include "../window/Window.hpp"
+
 #include "../util/Shader.hpp"
 
 #include "../camera/Camera.hpp"

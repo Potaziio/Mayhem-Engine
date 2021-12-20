@@ -7,6 +7,11 @@
 
 #include "Vector2f.hpp"
 
+#include "../../../../include/vendor/glm/glm/glm.hpp"
+#include "../../../../include/vendor/glm/glm/gtc/matrix_transform.hpp"
+#include "../../../../include/vendor/glm/glm/gtc/type_ptr.hpp"
+#include "../../../../include/vendor/glm/glm/gtx/string_cast.hpp"
+
 namespace Mayhem {
     namespace Math {
         struct Vector3f {
@@ -16,12 +21,19 @@ namespace Mayhem {
 
             Vector3f(float xPos, float yPos, float zPos);
             Vector3f(Vector2f vec, float zPos);
+            Vector3f(float defVal);
             Vector3f();
 
             void Print();
 
             void Normalize();
             float getLength();
+
+            float Distance(Vector3f target);
+
+            static Vector3f Lerp(Vector3f source, Vector3f target, float speed);
+
+            Vector3f operator+(Vector3f vecToAdd);
 
             Vector3f operator-(Vector3f vecToSubstract);
 
