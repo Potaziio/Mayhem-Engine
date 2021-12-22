@@ -43,7 +43,13 @@ void Mayhem::Scenes::Scene::onSceneStart() {
 }
 
 void Mayhem::Scenes::Scene::onEditorUpdate() {
-    /*
+}
+
+void Mayhem::Scenes::Scene::onRuntimeUpdate() {
+    /* int renderCount = 0; */
+
+    OrthoCamera->update();
+
     for (auto& go : gameObjects) {
         if (go.second->HasComponent<ECS::Components::SpriteRenderer>()) {
             ECS::Components::SpriteRenderer* spriterenderer = go.second->GetComponent<ECS::Components::SpriteRenderer>();
@@ -51,29 +57,34 @@ void Mayhem::Scenes::Scene::onEditorUpdate() {
             spriterenderer->shader->use();
             spriterenderer->shader->sendMat4("view", OrthoCamera->GetViewMatrix());
             spriterenderer->shader->sendMat4("projection", OrthoCamera->GetProjectionMatrix());
-            spriterenderer->DrawRect();
+            spriterenderer->render();
             spriterenderer->shader->detach();
         }
     }
-    */
-}
 
-void Mayhem::Scenes::Scene::onRuntimeUpdate() {
-    for (auto& go : gameObjects) {
-        if (go.second->transform->position.x > -(OrthoCamera->CameraBoundsX + 100) * 0.5f) {
-            if (go.second->transform->position.x < (OrthoCamera->CameraBoundsX + 100) * 0.5f) {
-                if (go.second->HasComponent<ECS::Components::SpriteRenderer>()) {
-                    ECS::Components::SpriteRenderer* spriterenderer = go.second->GetComponent<ECS::Components::SpriteRenderer>();
+    // Frustum culling testing
 
-                    spriterenderer->shader->use();
-                    spriterenderer->shader->sendMat4("view", OrthoCamera->GetViewMatrix());
-                    spriterenderer->shader->sendMat4("projection", OrthoCamera->GetProjectionMatrix());
-                    spriterenderer->DrawRect();
-                    spriterenderer->shader->detach();
-                }
-            }
-        }
-    }
+    /* for (auto& go : gameObjects) { */
+    /*     if (go.second->transform->position.x > -(OrthoCamera->CameraBoundsX + 100) * 0.5f) { */
+    /*         if (go.second->transform->position.x < (OrthoCamera->CameraBoundsX + 100) * 0.5f) { */
+    /*             if (go.second->HasComponent<ECS::Components::SpriteRenderer>()) { */
+    /*                 ECS::Components::SpriteRenderer* spriterenderer = go.second->GetComponent<ECS::Components::SpriteRenderer>(); */
+
+    /*                 spriterenderer->shader->use(); */
+    /*                 spriterenderer->shader->sendMat4("view", OrthoCamera->GetViewMatrix()); */
+    /*                 spriterenderer->shader->sendMat4("projection", OrthoCamera->GetProjectionMatrix()); */
+    /*                 spriterenderer->render(); */
+    /*                 spriterenderer->shader->detach(); */
+                    
+    /*                 renderCount++; */
+    /*             } */
+    /*         } else { */
+    /*             renderCount--; */
+    /*         } */
+    /*     } else { */
+    /*         renderCount--; */
+    /*     } */
+    /* } */
 }
 
 std::unordered_map<std::string, Mayhem::ECS::GameObject*> Mayhem::Scenes::Scene::GetGameObjects() {

@@ -20,8 +20,10 @@ namespace Mayhem {
                 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 
             public:
-                static float CameraBoundsX;
-                static float CameraBoundsY;
+                float CameraBoundsX;
+                float CameraBoundsY;
+
+                float CameraFrustum;
 
                 float xMin;
                 float xMax;
@@ -39,6 +41,8 @@ namespace Mayhem {
 
                 glm::mat4 GetViewMatrix();
                 glm::mat4 GetProjectionMatrix();
+
+                void update();
         };
 
         class PerspectiveCamera : public GameObject {

@@ -19,6 +19,14 @@ Mayhem::Math::Vector4f Mayhem::Math::Vector4f::operator*(Vector4f vecToMult) {
     return Vector4f(x * vecToMult.x, y * vecToMult.y, z * vecToMult.z, w * vecToMult.w);
 }
 
+bool Mayhem::Math::Vector4f::operator==(Vector4f vecToCompare) {
+    return x == vecToCompare.x && y == vecToCompare.y && z == vecToCompare.z && w == vecToCompare.w;
+}
+
+bool Mayhem::Math::Vector4f::operator!=(Vector4f vecToCompare) {
+    return x != vecToCompare.x || y != vecToCompare.y || z != vecToCompare.z || w != vecToCompare.w;
+}
+
 float Mayhem::Math::Vector4f::getLength() {
     return sqrt(x * x + y * y + z * z + w * w);
 }

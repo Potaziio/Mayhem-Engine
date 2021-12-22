@@ -19,6 +19,9 @@
 
 #include "../window/Window.hpp"
 
+#include "../sprite/Sprite.hpp"
+#include "../sprite/sprites/Rect.hpp"
+
 #include "../util/Shader.hpp"
 
 #include "../camera/Camera.hpp"

@@ -20,7 +20,7 @@ namespace Mayhem {
                 std::string name;
                 Utils::UUID uuid;
             public:
-                Components::Transform* transform = new Components::Transform(Math::Vector3f(), Math::Vector3f());
+                Components::Transform* transform = new Components::Transform(Math::Vector3f(), Math::Vector3f(), Math::Vector3f(1.0f, 1.0f, 1.0f));
 
                 enum STATE {
                     MOUSEHOVER,
@@ -47,6 +47,16 @@ namespace Mayhem {
                     if (HasComponent<T>()) {return;}
                     components[typeid(component)] = new T(component);
                     static_cast<T*>(components.at(typeid(component)))->gameObject = this;
+                }
+
+                template <typename T, typename... Components>
+                void AddComponent(T component, Components... OtherComponents) {
+                    if (!HasComponent<T>()) { return; }
+
+                    components[typeid(component)] = new T(component);
+                    static_cast<T*>(components.at(typeid(component)))->gameObject = this;
+
+                    AddComponent(OtherComponents...);
                 }
 
                 template <typename T>

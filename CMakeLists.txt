@@ -14,6 +14,7 @@ find_package(OpenGL REQUIRED)
 file (GLOB SOURCE_FILES
     "Mayhem/src/*/*.cpp"
     "Mayhem/src/*/*/*.cpp"
+    "Mayhem/src/*/*/*/*.cpp"
     "Mayhem/src/*.cpp"
     )
 

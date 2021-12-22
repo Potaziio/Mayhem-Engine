@@ -5,6 +5,8 @@
 #include "../../util/Shader.hpp"
 #include "../GameObject.hpp"
 
+#include "../../sprite/Sprite.hpp"
+
 #include "../../math/vector/Vector4f.hpp"
 
 namespace Mayhem {
@@ -12,31 +14,31 @@ namespace Mayhem {
         namespace Components {
             class SpriteRenderer : public Component {
                 private:
-                    unsigned int VAO, VBO, EBO;
-                    unsigned int* indices;
-                    float* vertices;
-
-                    bool wasInitialized = false;
-
-                    bool isRect = false;
-                    bool isTriangle = false;
+                    Draw::Sprite2D::BaseSprite* sprite;
                 public:
                     GameObject* gameObject;
                     std::string GetComponentType() override {return "Sprite Renderer";}
 
+                    enum SPRITESTATE {
+                        CLEAN,
+                        DIRTY
+                    };
+
+                    SPRITESTATE spriteState = CLEAN;
+
                     Utils::Shader* shader;
 
                     Math::Vector4f color;
-                    
-                    ~SpriteRenderer();
-                    SpriteRenderer(Utils::Shader* shader, Math::Vector4f color);
-                    void genRectVertices();
-                    void genRectIndices();
-                    void CreateRect();
-                    void CreateTriangle() {}
 
-                    void DrawRect();
-                    void DrawTriangle() {}
+                    void UpdateSpriteAttributes();
+                   
+                    template <typename T>
+                    SpriteRenderer(Utils::Shader* shader, Math::Vector4f color, T sprite): shader(shader), color(color), sprite(new T(sprite)) {
+                        this->sprite->color = color;
+                        this->sprite->init();
+                    }
+
+                    void render();
             };
         }
     }

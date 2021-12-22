@@ -21,6 +21,10 @@ namespace Mayhem {
             void Normalize();
             float getLength();
 
+            bool operator==(Vector4f vecToCompare);
+            bool operator!=(Vector4f vecToCompare);
+
+
             Vector4f operator-(Vector4f vecToSubstract);
 
             Vector4f operator*(float val);

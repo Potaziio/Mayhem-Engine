@@ -13,6 +13,9 @@ Mayhem::ECS::OrthographicCamera::OrthographicCamera(Math::Vector3f pos, float xM
 }
 
 void Mayhem::ECS::OrthographicCamera::UpdateOrthoCameraBounds(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax) {
+    CameraBoundsX = xMax;
+    CameraBoundsY = yMax;
+
     this->xMin = xMin;
     this->xMax = xMax;
     this->yMin = yMin;
@@ -37,21 +40,20 @@ Mayhem::Math::Vector2f Mayhem::ECS::OrthographicCamera::ScreenToWorldPoint(Mayhe
     return Math::Vector2f(pos.x, pos.y);
 }
 
-glm::mat4 Mayhem::ECS::OrthographicCamera::GetViewMatrix() {
+void Mayhem::ECS::OrthographicCamera::update() {
     Math::Vector3f pos = transform->position;
 
     viewMatrix = glm::mat4(1.0f);
-    viewMatrix = glm::lookAt(glm::vec3(pos.x, pos.y, pos.z), cameraFront + glm::vec3(pos.x, pos.y, pos.z), cameraUp);
+    viewMatrix = glm::lookAt(glm::vec3(pos.x, -pos.y, pos.z), cameraFront + glm::vec3(pos.x, -pos.y, pos.z), cameraUp);
 
+    projectionMatrix = glm::mat4(1.0f);
+    projectionMatrix = glm::ortho(xMin, xMax, yMin, yMax, zMin, zMax);
+}
+
+glm::mat4 Mayhem::ECS::OrthographicCamera::GetViewMatrix() {
     return viewMatrix;
 }
 
 glm::mat4 Mayhem::ECS::OrthographicCamera::GetProjectionMatrix() {
-    projectionMatrix = glm::mat4(1.0f);
-    projectionMatrix = glm::ortho(xMin, xMax, yMin, yMax, zMin, zMax);
-
     return projectionMatrix;
 }
-
-float Mayhem::ECS::OrthographicCamera::CameraBoundsX;
-float Mayhem::ECS::OrthographicCamera::CameraBoundsY;

@@ -7,8 +7,8 @@ void Mayhem::Window::WindowFramebufferSizeCallback(GLFWwindow* window, int width
 
     currentScene->OrthoCamera->UpdateOrthoCameraBounds(-(float)width * 0.5f, (float)width * 0.5f, (float)height * 0.5f, -(float)height * 0.5f, 0.0f, 100.0f);
 
-    OrthographicCamera::CameraBoundsX = width;
-    OrthographicCamera::CameraBoundsY = height;
+    currentScene->OrthoCamera->CameraBoundsX = width;
+    currentScene->OrthoCamera->CameraBoundsY = height;
 }
 
 void Mayhem::Window::changeScene(enum Scenes::Scene::SCENETYPE sceneType) {

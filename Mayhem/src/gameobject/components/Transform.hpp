@@ -29,7 +29,7 @@ namespace Mayhem {
                     Math::Vector3f scale;
                     Math::Vector3f rotation;
 
-                    Transform(Math::Vector3f position, Math::Vector3f scale);
+                    Transform(Math::Vector3f position, Math::Vector3f scale, Math::Vector3f rotation);
 
                     Utils::UUID getID() {return componentID;}
                     glm::mat4 getTransformMatrix(); 
