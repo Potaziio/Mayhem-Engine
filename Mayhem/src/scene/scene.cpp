@@ -22,60 +22,69 @@ void Mayhem::Scenes::Scene::addGameObjectToScene(ECS::GameObject* go) {
 
 Mayhem::ECS::GameObject* Mayhem::Scenes::Scene::GetGameObject(std::string name) {
     bool found = true;
-
+    
     for (auto& go : gameObjects) {
         if (go.second->getName() == name) {
             found = true;
             return go.second;
         } 
     }
-
+    
     if (!found) {
         std::cout << "ERROR::NO::GAMEOBJECT::FOUND" << std::endl;
         return nullptr;
     }
-
+    
     return nullptr;
 }
 
 void Mayhem::Scenes::Scene::onSceneStart() {
-
+    
 }
 
 void Mayhem::Scenes::Scene::onEditorUpdate() {
 }
 
 void Mayhem::Scenes::Scene::onRuntimeUpdate() {
-    /* int renderCount = 0; */
-
-    OrthoCamera->update();
-
+    // Update view and projection matrices for ortho cameara
+    if (this->sceneCamera == ORTHOGRAPHIC)
+        OrthoCamera->update(); 
+    else 
+        PerspectiveCamera->update();
+    
     for (auto& go : gameObjects) {
         if (go.second->HasComponent<ECS::Components::SpriteRenderer>()) {
             ECS::Components::SpriteRenderer* spriterenderer = go.second->GetComponent<ECS::Components::SpriteRenderer>();
-
+            
             spriterenderer->shader->use();
-            spriterenderer->shader->sendMat4("view", OrthoCamera->GetViewMatrix());
-            spriterenderer->shader->sendMat4("projection", OrthoCamera->GetProjectionMatrix());
+
+            if (this->sceneCamera == ORTHOGRAPHIC) {
+                spriterenderer->shader->sendMat4("view", OrthoCamera->GetViewMatrix());
+                spriterenderer->shader->sendMat4("projection", OrthoCamera->GetProjectionMatrix());
+            } else {
+                spriterenderer->shader->sendMat4("view", PerspectiveCamera->GetViewMatrix());
+                spriterenderer->shader->sendMat4("projection", PerspectiveCamera->GetProjectionMatrix());
+            }
+
             spriterenderer->render();
             spriterenderer->shader->detach();
         }
     }
-
+    
     // Frustum culling testing
-
+    
     /* for (auto& go : gameObjects) { */
     /*     if (go.second->transform->position.x > -(OrthoCamera->CameraBoundsX + 100) * 0.5f) { */
     /*         if (go.second->transform->position.x < (OrthoCamera->CameraBoundsX + 100) * 0.5f) { */
     /*             if (go.second->HasComponent<ECS::Components::SpriteRenderer>()) { */
     /*                 ECS::Components::SpriteRenderer* spriterenderer = go.second->GetComponent<ECS::Components::SpriteRenderer>(); */
-
+    
     /*                 spriterenderer->shader->use(); */
     /*                 spriterenderer->shader->sendMat4("view", OrthoCamera->GetViewMatrix()); */
     /*                 spriterenderer->shader->sendMat4("projection", OrthoCamera->GetProjectionMatrix()); */
     /*                 spriterenderer->render(); */
     /*                 spriterenderer->shader->detach(); */
-                    
+    
     /*                 renderCount++; */
     /*             } */
     /*         } else { */

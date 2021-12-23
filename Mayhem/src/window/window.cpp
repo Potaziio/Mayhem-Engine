@@ -5,11 +5,15 @@ void Mayhem::Window::WindowFramebufferSizeCallback(GLFWwindow* window, int width
     Mayhem::Window::width = width;
     Mayhem::Window::height = height;
 
-    currentScene->OrthoCamera->UpdateOrthoCameraBounds(-(float)width * 0.5f, (float)width * 0.5f, (float)height * 0.5f, -(float)height * 0.5f, 0.0f, 100.0f);
-
-    currentScene->OrthoCamera->CameraBoundsX = width;
-    currentScene->OrthoCamera->CameraBoundsY = height;
-}
+    if (currentScene->sceneCamera == Scenes::Scene::SCENECAMERA::ORTHOGRAPHIC) {
+        currentScene->OrthoCamera->UpdateOrthoCameraBounds(-(float)width * 0.5f, (float)width * 0.5f, -(float)height * 0.5f, (float)height * 0.5f, 0.0f, 100.0f);
+        currentScene->OrthoCamera->CameraBoundsX = width;
+        currentScene->OrthoCamera->CameraBoundsY = height;
+    } else {
+        currentScene->PerspectiveCamera->aspectX = width;
+        currentScene->PerspectiveCamera->aspectY = height;
+    }
+ }
 
 void Mayhem::Window::changeScene(enum Scenes::Scene::SCENETYPE sceneType) {
     switch(sceneType) {

@@ -18,9 +18,11 @@ void main() {
 #type fragment
 #version 330 core
 
-out vec4 FragColor;
-
+// Color received from the vertex shader
 in vec4 ourColor;
+
+// Color send by the fragment shader
+out vec4 FragColor;
 
 void main() {
     FragColor = ourColor;

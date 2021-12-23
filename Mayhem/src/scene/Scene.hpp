@@ -20,6 +20,7 @@ namespace Mayhem {
             virtual void GuiUpdate() {}
 
             ECS::OrthographicCamera* OrthoCamera;
+            ECS::PerspectiveCamera* PerspectiveCamera;
 
             void freeSceneMemory();
 
@@ -31,12 +32,18 @@ namespace Mayhem {
             void onEditorUpdate();
             void onRuntimeUpdate();
 
+            enum SCENECAMERA {
+                PERSPECTIVE,
+                ORTHOGRAPHIC,
+            };
+
             enum SCENETYPE {
                 EDITORSCENE,
                 RUNTIMESCENE,
             };
 
             SCENETYPE sceneType;
+            SCENECAMERA sceneCamera = ORTHOGRAPHIC;
 
             std::unordered_map<std::string, ECS::GameObject*> GetGameObjects();
         };

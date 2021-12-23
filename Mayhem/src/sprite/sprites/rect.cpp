@@ -15,7 +15,7 @@ void Mayhem::Draw::Sprite2D::Rect::generateVertices() {
     vertices[5] = color.z;
     vertices[6] = color.w;
 
-    vertices[7] = 1.0f;
+    vertices[7] = 50.0f;
     vertices[8] = 0.0f;
     vertices[9] = 0.0f;
     vertices[10] = color.x;
@@ -24,15 +24,15 @@ void Mayhem::Draw::Sprite2D::Rect::generateVertices() {
     vertices[13] = color.w;
 
     vertices[14] = 0.0f;
-    vertices[15] = 1.0f;
+    vertices[15] = 50.0f;
     vertices[16] = 0.0f;
     vertices[17] = color.x;
     vertices[18] = color.y;
     vertices[19] = color.z;
     vertices[20] = color.w;
 
-    vertices[21] = 1.0f;
-    vertices[22] = 1.0f;
+    vertices[21] = 50.0f;
+    vertices[22] = 50.0f;
     vertices[23] = 0.0f;
     vertices[24] = color.x;
     vertices[25] = color.y;
