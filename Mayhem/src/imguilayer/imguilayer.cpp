@@ -32,9 +32,7 @@ void Mayhem::Utils::UI::ImGuiLayer::setupDockspace() {
     ImGuiWindowFlags_NoBringToFrontOnFocus |
     ImGuiWindowFlags_NoNavFocus;
 
-    bool show = true;
-
-    ImGui::Begin("Dockspace", &show, windowFlags);
+    ImGui::Begin("Dockspace", NULL, windowFlags);
     ImGui::PopStyleVar(2);
 
     ImGuiIO& io = ImGui::GetIO();
@@ -44,8 +42,6 @@ void Mayhem::Utils::UI::ImGuiLayer::setupDockspace() {
     	ImGuiID dockspace = ImGui::GetID("Dockspace");
     	ImGui::DockSpace(dockspace, ImVec2(0.0f, 0.0f));
     }
-
-
 }
 
 

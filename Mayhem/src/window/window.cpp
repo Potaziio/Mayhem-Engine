@@ -98,10 +98,12 @@ void Mayhem::Window::update() {
             exit(0);
         }
 
-        glClear(GL_COLOR_BUFFER_BIT);
 
-        currentScene->Update();
+
+        glClear(GL_COLOR_BUFFER_BIT);
         Utils::UI::ImGuiLayer::update();
+        currentScene->Update();
+
 
         if (currentScene->sceneType == Scenes::Scene::EDITORSCENE) {
             currentScene->onEditorUpdate();
@@ -122,6 +124,10 @@ void Mayhem::Window::update() {
 void Mayhem::Window::freeMemory() {
     currentScene->freeSceneMemory();
     delete currentScene;
+
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
 
     glfwTerminate();
     glfwDestroyWindow(Window::window);
