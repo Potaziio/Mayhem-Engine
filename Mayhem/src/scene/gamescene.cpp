@@ -12,9 +12,9 @@
 
 Shader* shader = new Shader("../Mayhem/assets/shaders/defaultmesh.glsl");
 
-GameObject* Player = new GameObject("Player", Transform(Vector3f(0.0f, 0.0f, 0.0f), Vector3f(0.5f, 0.5f, 0.0f), Vector3f(1.0f, 1.0f, 1.0f)));
+GameObject* Player = new GameObject("Player", Transform(Vector3f(0.0f, 0.0f, 0.0f), Vector3f(1.0f, 1.0f, 0.0f), Vector3f(1.0f, 1.0f, 1.0f)));
 
-float playerSpeed = 700.0f;
+float playerSpeed = 30.0f;
 
 ImVec4 win_color = ImVec4(167.0f / 255.0f, 0.0f, 214.0f / 255.0f , 255.0f / 255.0f);
 
@@ -23,17 +23,22 @@ Vector4f colorTest = Vector4f(RGBANORM(255.0f, 255.0f, 0.0f, 20.0f));
 void Scenes::GameScene::Start() {
     std::cout << "On Runtime Scene" << std::endl;
     shader->compile();
-    this->OrthoCamera = new ECS::OrthographicCamera(Vector3f(0.0f, 0.0f, 0.0f), -(float)Window::getWidth() * 0.5f, 
-            (float)Window::getWidth() * 0.5f, -(float)Window::getHeight() * 0.5f, (float)Window::getHeight() * 0.5f, 0.0f, 100.0f );
-    
+    this->PerspectiveCamera = new ECS::PerspectiveCamera(Vector3f(0.0f, 0.0f, 20.0f), 75.0f, Window::getWidth(), Window::getHeight(), 0.0f, 100.0f);
+
     Player->AddComponent(SpriteRenderer(shader, Vector4f(RGBANORM(255.0f, 255.0f, 0.0f, 255.0f)), Draw::Sprite2D::Rect()));
 
     this->addGameObjectToScene(Player);
-    this->addGameObjectToScene(OrthoCamera);
+    this->addGameObjectToScene(PerspectiveCamera);
 }
 
 void Scenes::GameScene::Update() {
     glClearColor(win_color.x, win_color.y, win_color.z, win_color.w);
+
+    Vector3f mouseWorldPos = this->PerspectiveCamera->ScreenPointToRay(Vector3f(Input::MouseListener::GetMousePos(), 0.0f));
+
+    mouseWorldPos.Print();
+
+    Player->transform->position = Vector3f(mouseWorldPos.x, mouseWorldPos.y, 0.0f); 
     
     Vector3f movement = Vector3f(Input::KeyboardListener::GetAxisRaw("Horizontal"), Input::KeyboardListener::GetAxisRaw("Vertical"), 0.0f);
     movement.Normalize();
@@ -48,7 +53,8 @@ void Scenes::GameScene::GuiUpdate() {
     ImGui::End();
     
     ImGui::Begin("Camera Settings");
-    ImGui::DragFloat3("Position", (float*)&this->OrthoCamera->transform->position);
+    ImGui::DragFloat3("Position", (float*)&this->PerspectiveCamera->transform->position);
+    ImGui::DragFloat("Fov", &this->PerspectiveCamera->fov);
     ImGui::End();
     
     ImGui::Begin("Player Settings");

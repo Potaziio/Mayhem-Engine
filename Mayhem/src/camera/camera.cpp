@@ -93,12 +93,9 @@ void Mayhem::ECS::PerspectiveCamera::update() {
 }
 
 Mayhem::Math::Vector3f Mayhem::ECS::PerspectiveCamera::ScreenPointToRay(Mayhem::Math::Vector3f point) {
-    glm::vec4 viewport = glm::vec4(0.0f, 0.0f, aspectX, aspectY);
-    glm::vec3 pos = glm::vec3(point.x, point.y - 0.5, 0.5f);
+    glm::vec3 worldPos = glm::unProject(glm::vec3(point.x, -point.y, point.z), viewMatrix, projectionMatrix, glm::vec4(0.0f, 0.0f, aspectX, aspectY));
 
-    glm::vec3 temp = glm::unProject(pos, viewMatrix, projectionMatrix, viewport);
-
-    return Math::Vector3f(temp.x, -temp.y, temp.z) * 100.0f;
+    return Math::Vector3f(worldPos.x, worldPos.y, worldPos.z);
 }
 
 glm::mat4 Mayhem::ECS::PerspectiveCamera::GetViewMatrix() {

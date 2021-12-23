@@ -26,6 +26,10 @@ Mayhem::Math::Vector3f Mayhem::Math::Vector3f::operator*(Vector3f vecToMult) {
     return Vector3f(x * vecToMult.x, y * vecToMult.y, z * vecToMult.z);
 }
 
+Mayhem::Math::Vector3f Mayhem::Math::Vector3f::operator/(Vector3f vecToDivide) {
+    return Vector3f(x / vecToDivide.x, y / vecToDivide.y, z / vecToDivide.z);
+} 
+
 float Mayhem::Math::Vector3f::getLength() {
     return glm::sqrt(x * x + y * y + z * z);
 }

@@ -43,7 +43,7 @@ namespace Mayhem {
             };
 
             SCENETYPE sceneType;
-            SCENECAMERA sceneCamera = ORTHOGRAPHIC;
+            SCENECAMERA sceneCamera = PERSPECTIVE;
 
             std::unordered_map<std::string, ECS::GameObject*> GetGameObjects();
         };

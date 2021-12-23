@@ -34,6 +34,7 @@ namespace Mayhem {
             static Vector3f Lerp(Vector3f source, Vector3f target, float speed);
 
             Vector3f operator+(Vector3f vecToAdd);
+            Vector3f operator/(Vector3f vecToDivide);
 
             Vector3f operator-(Vector3f vecToSubstract);
 
