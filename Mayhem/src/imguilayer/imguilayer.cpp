@@ -17,11 +17,13 @@ void Mayhem::Utils::UI::ImGuiLayer::init() {
 
 
 void Mayhem::Utils::UI::ImGuiLayer::setupDockspace() {
-	ImGuiWindowFlags windowFlags = ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoDocking | ImGuiWindowFlags_NoBackground;
+	ImGuiWindowFlags windowFlags = ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoDocking;
 
     ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f), ImGuiCond_Always);
     ImGui::SetNextWindowSize(ImVec2(Window::getWidth(), Window::getHeight()));
 
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.0f);
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);
 
     windowFlags |= ImGuiWindowFlags_NoTitleBar | 
     ImGuiWindowFlags_NoCollapse |
