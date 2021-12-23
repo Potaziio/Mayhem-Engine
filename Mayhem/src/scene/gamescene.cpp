@@ -36,9 +36,7 @@ void Scenes::GameScene::Update() {
 
     Vector3f mouseWorldPos = this->PerspectiveCamera->ScreenPointToRay(Vector3f(Input::MouseListener::GetMousePos(), 0.0f));
 
-    mouseWorldPos.Print();
-
-    Player->transform->position = Vector3f(mouseWorldPos.x, mouseWorldPos.y, 0.0f); 
+    //Player->transform->position = Vector3f(mouseWorldPos.x, mouseWorldPos.y, 0.0f); 
     
     Vector3f movement = Vector3f(Input::KeyboardListener::GetAxisRaw("Horizontal"), Input::KeyboardListener::GetAxisRaw("Vertical"), 0.0f);
     movement.Normalize();

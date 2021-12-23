@@ -7,9 +7,9 @@
 #include "../../../include/vendor/glew-2.2.0/include/GL/glew.h"
 #include "../../../include/vendor/glfw-3.3.5/include/GLFW/glfw3.h"
 
-#include "../../../include/vendor/imgui/imgui.h"
-#include "../../../include/vendor/imgui/imgui_impl_opengl3.h"
-#include "../../../include/vendor/imgui/imgui_impl_glfw.h"
+#include "../../../include/vendor/imgui-docking/imgui.h"
+#include "../../../include/vendor/imgui-docking/imgui_impl_opengl3.h"
+#include "../../../include/vendor/imgui-docking/imgui_impl_glfw.h"
 
 #include "../input/KeyboardListener.hpp"
 #include "../input/MouseListener.hpp"
@@ -23,7 +23,7 @@
 #include "../scene/EditorScene.hpp"
 
 class Window;
-#include "../guipanels/EditorGUI.hpp"
+#include "../imguilayer/ImGuiLayer.hpp"
 
 namespace Mayhem {
     class Window {

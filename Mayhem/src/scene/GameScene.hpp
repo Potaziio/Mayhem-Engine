@@ -29,9 +29,9 @@
 #include "../gameobject/components/Transform.hpp"
 #include "../gameobject/components/SpriteRenderer.hpp"
 
-#include "../../../include/vendor/imgui/imgui.h"
-#include "../../../include/vendor/imgui/imgui_impl_opengl3.h"
-#include "../../../include/vendor/imgui/imgui_impl_glfw.h"
+#include "../../../include/vendor/imgui-docking/imgui.h"
+#include "../../../include/vendor/imgui-docking/imgui_impl_opengl3.h"
+#include "../../../include/vendor/imgui-docking/imgui_impl_glfw.h"
 
 // Forward referece
 class GameScene;

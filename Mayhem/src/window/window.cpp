@@ -75,14 +75,7 @@ Mayhem::Window::Window(const char* name, int width, int height) {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-
-    ImGui::StyleColorsDark();
-
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 130");
+    Utils::UI::ImGuiLayer::init();
 
     changeScene(Scenes::Scene::RUNTIMESCENE);
 
@@ -99,9 +92,6 @@ Mayhem::Window::Window(const char* name, int width, int height) {
 void Mayhem::Window::update() {
     while(!glfwWindowShouldClose(Mayhem::Window::window)) { 
         glfwPollEvents();
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
 
         if (Mayhem::Input::KeyboardListener::GetKeyDown(GLFW_KEY_ESCAPE)) {
             std::cout << "Quitting..." << std::endl;
@@ -111,7 +101,7 @@ void Mayhem::Window::update() {
         glClear(GL_COLOR_BUFFER_BIT);
 
         currentScene->Update();
-        currentScene->GuiUpdate();
+        Utils::UI::ImGuiLayer::update();
 
         if (currentScene->sceneType == Scenes::Scene::EDITORSCENE) {
             currentScene->onEditorUpdate();
@@ -119,12 +109,8 @@ void Mayhem::Window::update() {
             currentScene->onRuntimeUpdate();
         }
 
-        Utils::GUI::EditorGUI::onEditorGuiUpdate();
-
         // ImGui rendering
 
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         glfwSwapBuffers(Mayhem::Window::window);
 
         Mayhem::Input::KeyboardListener::endKeyFrame();

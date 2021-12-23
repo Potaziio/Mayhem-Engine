@@ -19,7 +19,7 @@ file (GLOB SOURCE_FILES
     )
 
 file (GLOB IMGUI_SOURCES
-    "include/vendor/imgui/*.cpp"
+    "include/vendor/imgui-docking/*.cpp"
     )
 
 file(GLOB GLEW_SOURCES
@@ -29,7 +29,7 @@ file(GLOB GLEW_SOURCES
 file (GLOB INCLUDE_DIRS 
     "include/vendor/glew-2.2.0/include/GL/*.h"
     "include/vendor/stb_image/stb_image.h"
-    "include/vendor/imgui/*.h"
+    "include/vendor/imgui-docking/*.h"
     "include/vendor/glm/*.hpp"
     )
 
