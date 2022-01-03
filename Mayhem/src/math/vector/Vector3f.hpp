@@ -18,29 +18,30 @@ namespace Mayhem {
             float x;
             float y;
             float z;
-
+			
             Vector3f(float xPos, float yPos, float zPos);
             Vector3f(Vector2f vec, float zPos);
             Vector3f(float defVal);
             Vector3f();
-
+			
             void Print();
-
+			
             void Normalize();
+			
             float getLength();
-
+			
             float Distance(Vector3f target);
-
+			
             static Vector3f Lerp(Vector3f source, Vector3f target, float speed);
-
+			
             Vector3f operator+(Vector3f vecToAdd);
             Vector3f operator/(Vector3f vecToDivide);
-
+			
             Vector3f operator-(Vector3f vecToSubstract);
-
+			
             Vector3f operator*(float val);
             Vector3f operator*(Vector3f vecToMult);
-
+			
             void operator+=(Vector3f vecToAdd);
             void operator-=(Vector3f vecToSub);          
         };

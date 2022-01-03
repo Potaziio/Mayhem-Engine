@@ -2,7 +2,7 @@
 #include "Component.hpp"
 
 void Mayhem::ECS::Components::SpriteRenderer::render() {
-    if (this->color != this->sprite->color) {
+    if (this->color * 10 != this->sprite->color * 10) {
         spriteState = DIRTY;
     }
 
@@ -16,8 +16,12 @@ void Mayhem::ECS::Components::SpriteRenderer::render() {
 }
 
 void Mayhem::ECS::Components::SpriteRenderer::UpdateSpriteAttributes() {
-    this->sprite->color = color;
+    this->sprite->color = color * 10;
     this->sprite->regenVBOAttributes();
+}
+
+void Mayhem::ECS::Components::SpriteRenderer::OnImGui() {
+    ImGui::ColorEdit4("Color", (float*)&this->color);
 }
 
 void DrawTriangle();

@@ -31,6 +31,7 @@ file (GLOB INCLUDE_DIRS
     "include/vendor/stb_image/stb_image.h"
     "include/vendor/imgui-docking/*.h"
     "include/vendor/glm/*.hpp"
+	"include/vendor/FastNoiseLite/Cpp/FastNoiseLite.h"
     )
 
 add_subdirectory("include/vendor/glfw-3.3.5/" glfw)

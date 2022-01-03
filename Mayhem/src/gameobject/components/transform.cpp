@@ -10,3 +10,9 @@ glm::mat4 Mayhem::ECS::Components::Transform::getTransformMatrix() {
 
     return transformMatrix;
 }
+
+
+void Mayhem::ECS::Components::Transform::OnImGui() {
+    ImGui::DragFloat3("Position", (float*)&this->position);
+    ImGui::DragFloat3("Scale", (float*)&this->scale);
+}

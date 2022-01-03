@@ -17,12 +17,6 @@ void Mayhem::Window::WindowFramebufferSizeCallback(GLFWwindow* window, int width
 
 void Mayhem::Window::changeScene(enum Scenes::Scene::SCENETYPE sceneType) {
     switch(sceneType) {
-        case Scenes::Scene::EDITORSCENE:
-            delete currentScene;
-            currentScene = new Scenes::EditorScene();
-            currentScene->sceneType = Scenes::Scene::EDITORSCENE;
-            currentScene->Start();
-            break;
         case Scenes::Scene::RUNTIMESCENE:
             delete currentScene;
             currentScene = new Scenes::GameScene();
@@ -72,9 +66,6 @@ Mayhem::Window::Window(const char* name, int width, int height) {
     glfwSetScrollCallback(window, Mayhem::Input::MouseListener::MouseScrollCallback);
     glfwSetMouseButtonCallback(window, Mayhem::Input::MouseListener::MouseButtonCallback);
 
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
     Utils::UI::ImGuiLayer::init();
 
     changeScene(Scenes::Scene::RUNTIMESCENE);
@@ -85,9 +76,14 @@ Mayhem::Window::Window(const char* name, int width, int height) {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    // Enable depth buffer
+    glEnable(GL_DEPTH_TEST);
+
     // Seed rand
     srand(time(NULL));
 }
+
+bool wireOn = false;
 
 void Mayhem::Window::update() {
     while(!glfwWindowShouldClose(Mayhem::Window::window)) { 
@@ -99,18 +95,27 @@ void Mayhem::Window::update() {
         }
 
 
+        if (Mayhem::Input::KeyboardListener::GetKeyDown(GLFW_KEY_P)) {
+            if (wireOn) {
+                wireOn = false;
+                glPolygonMode(GL_FRONT, GL_FILL);
+                glPolygonMode(GL_BACK, GL_FILL);
+            } else {
+                wireOn = true;
+                glPolygonMode(GL_FRONT, GL_LINE);
+                glPolygonMode(GL_BACK, GL_LINE);
+            }
+        }
 
-        glClear(GL_COLOR_BUFFER_BIT);
-        Utils::UI::ImGuiLayer::update();
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
         currentScene->Update();
 
-
-        if (currentScene->sceneType == Scenes::Scene::EDITORSCENE) {
-            currentScene->onEditorUpdate();
-        } else if (currentScene->sceneType == Scenes::Scene::RUNTIMESCENE) {
+        if (currentScene->sceneType == Scenes::Scene::RUNTIMESCENE) {
             currentScene->onRuntimeUpdate();
         }
 
+        Utils::UI::ImGuiLayer::update();
         // ImGui rendering
 
         glfwSwapBuffers(Mayhem::Window::window);
@@ -122,6 +127,10 @@ void Mayhem::Window::update() {
 }
 
 void Mayhem::Window::freeMemory() {
+    glDeleteFramebuffers(GL_FRAMEBUFFER, &windowFBO);
+    glDeleteRenderbuffers(GL_RENDERBUFFER, &windowRBO);
+    glDeleteTextures(GL_TEXTURE, &windowFBOTexture);
+
     currentScene->freeSceneMemory();
     delete currentScene;
 
@@ -137,6 +146,14 @@ void Mayhem::Window::freeMemory() {
 
 GLFWwindow* Mayhem::Window::window;
 Mayhem::Scenes::Scene* Mayhem::Window::currentScene;
+
+unsigned int Mayhem::Window::windowFBO;
+unsigned int Mayhem::Window::windowFBOTexture;
+unsigned int Mayhem::Window::windowRBO;
+
+float Mayhem::Window::sceneWindowWidth;
+float Mayhem::Window::sceneWindowHeight;
+
 int Mayhem::Window::width;
 int Mayhem::Window::height;
 const char* Mayhem::Window::name;

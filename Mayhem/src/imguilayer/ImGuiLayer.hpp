@@ -18,7 +18,6 @@ namespace Mayhem {
 				public:
 					static void init();
 					static void update();
-					static void setupDockspace();
 			};
 		}
 	}

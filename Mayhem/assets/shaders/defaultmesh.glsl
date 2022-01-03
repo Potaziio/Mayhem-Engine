@@ -25,5 +25,5 @@ in vec4 ourColor;
 out vec4 FragColor;
 
 void main() {
-    FragColor = ourColor;
+    FragColor = ourColor / 10;
 }

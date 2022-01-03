@@ -20,7 +20,6 @@
 
 #include "../scene/Scene.hpp"
 #include "../scene/GameScene.hpp"
-#include "../scene/EditorScene.hpp"
 
 class Window;
 #include "../imguilayer/ImGuiLayer.hpp"
@@ -33,7 +32,15 @@ namespace Mayhem {
             static int height;
             static const char* name;
 
+            static unsigned int windowFBO;
+            static unsigned int windowRBO;
+            static unsigned int windowFBOTexture;
+
             static Mayhem::Scenes::Scene* currentScene;
+            static void setupFBO();
+
+            static float sceneWindowWidth;
+            static float sceneWindowHeight;
         public:
             static GLFWwindow* getWindow() {return window;}
             static int getWidth() {return width;}
@@ -43,6 +50,9 @@ namespace Mayhem {
             static Mayhem::Scenes::Scene* getCurrentScene() {return currentScene;} 
 
             static void changeScene(enum Scenes::Scene::SCENETYPE);
+
+            static float getSceneWindowWidth() { return sceneWindowWidth; }
+            static float getSceneWindowHeight() { return sceneWindowHeight; }
 
             Window(const char* name, int width, int height);
 

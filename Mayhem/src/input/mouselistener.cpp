@@ -1,7 +1,7 @@
 #include "MouseListener.hpp"
 
 void Mayhem::Input::MouseListener::MouseCursorCallback(GLFWwindow* window, double xpos, double ypos) {
-    Mayhem::Input::MouseListener::lastMousePos = Math::Vector2f(mousePos.y, mousePos.x);
+    Mayhem::Input::MouseListener::lastMousePos = Math::Vector2f(mousePos.x, mousePos.y);
     Mayhem::Input::MouseListener::mousePos = Math::Vector2f((float)xpos, (float)ypos);
 }
 
@@ -27,7 +27,7 @@ void Mayhem::Input::MouseListener::endMouseFrame() {
     MouseListener::lastMousePos = Math::Vector2f(MouseListener::mousePos.x, MouseListener::mousePos.y);
     MouseListener::mouseScroll = 0.0f;
     MouseListener::isDragging = MouseListener::mouseHold[0];
-
+    
     for (int i = 0; i < MOUSEBUTTONS; ++i) {
         MouseListener::mouseDown[i] = false;
         MouseListener::mouseUp[i] = false;

@@ -24,6 +24,8 @@ namespace Mayhem {
                 public:
                     std::string GetComponentType() override {return "Transform";}
 
+                    void OnImGui() override;
+
                     GameObject* gameObject;
                     Math::Vector3f position;
                     Math::Vector3f scale;

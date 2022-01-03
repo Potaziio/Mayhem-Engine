@@ -17,14 +17,15 @@
 #include "../util/MayhemUtil.hpp"
 #include "../gameobject/GameObject.hpp"
 
-#include "../window/Window.hpp"
+#include "../util/AssetPool.hpp"
 
 #include "../sprite/Sprite.hpp"
 #include "../sprite/sprites/Rect.hpp"
 
-#include "../util/Shader.hpp"
-
 #include "../camera/Camera.hpp"
+
+#include "../worldgen/Chunk.hpp"
+#include "../worldgen/ChunkManager.hpp"
 
 #include "../gameobject/components/Transform.hpp"
 #include "../gameobject/components/SpriteRenderer.hpp"
@@ -36,21 +37,24 @@
 // Forward referece
 class GameScene;
 #include "../window/Window.hpp"
+#include "../physics/raycast/Raycast.hpp"
+
 
 using namespace Mayhem;
 using namespace Mayhem::Utils;
 using namespace Mayhem::ECS;
 using namespace Mayhem::ECS::Components;
 using namespace Mayhem::Math;
+using namespace Mayhem::WorldGen;
 
 namespace Mayhem {
     namespace Scenes {
         class GameScene : public Scene {
             public:
-                GameScene() {}
-                void Start() override;
-                void Update() override;
-                void GuiUpdate() override;
+			GameScene() {}
+			void Start() override;
+			void Update() override;
+			void GuiUpdate() override;
         };
     }
 }

@@ -18,6 +18,7 @@ namespace Mayhem {
                 public:
                     GameObject* gameObject;
                     std::string GetComponentType() override {return "Sprite Renderer";}
+                    void OnImGui() override;
 
                     enum SPRITESTATE {
                         CLEAN,
@@ -31,12 +32,12 @@ namespace Mayhem {
                     Math::Vector4f color;
 
                     void UpdateSpriteAttributes();
-                   
+
                     template <typename T>
-                    SpriteRenderer(Utils::Shader* shader, Math::Vector4f color, T sprite): shader(shader), color(color), sprite(new T(sprite)) {
-                        this->sprite->color = color;
-                        this->sprite->init();
-                    }
+                        SpriteRenderer(Utils::Shader* shader, Math::Vector4f color, T sprite): shader(shader), color(color), sprite(new T(sprite)) {
+                            this->sprite->color = color * 10;
+                            this->sprite->init();
+                        }
 
                     void render();
             };

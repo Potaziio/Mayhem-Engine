@@ -1,0 +1,44 @@
+version(1);
+
+project_name = "Mayhem";
+
+patterns = {
+	"*.c",
+	"*.cpp",
+	"*.ds",
+	"*.h",
+	"*.bat",
+	"*.sh",
+	"*.4coder",
+};
+
+blacklist_patterns = {
+	".*",
+};
+
+command_list = {
+	{
+		.name = "build",
+		.out = "*compilation*",
+		.footer_panel = true,
+		.save_dirty_files = true,
+		.cursor_at_end = true,
+		.cmd = {
+			{ "sh build.sh", .os = "linux" },
+		},
+	},
+	
+	{
+		.name = "run",
+		.out = "*compilation*",
+		.footer_panel = true,
+		.save_dirty_files = true,
+		.cursor_at_end = true,
+		.cmd = {
+			{ "sh run.sh", .os = "linux" },
+		},
+	},
+};
+
+fkey_command[5] = "build";
+fkey_command[6] = "run";

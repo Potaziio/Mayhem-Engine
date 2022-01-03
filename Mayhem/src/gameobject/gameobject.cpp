@@ -2,7 +2,7 @@
 
 Mayhem::ECS::GameObject::GameObject(std::string name): name(name), uuid(Mayhem::Utils::UUID()) {
     printf("Created GameObject -> : %s UUID: %s\n", this->name.c_str(), this->uuid.id().c_str());
-
+    
     transform->scale = Math::Vector3f(50.0f, 50.0f,  50.0f);
     transform->rotation = Math::Vector3f(1.0f, 1.0f, 1.0f);
     this->components[typeid(Components::Transform)] = transform;
@@ -10,11 +10,11 @@ Mayhem::ECS::GameObject::GameObject(std::string name): name(name), uuid(Mayhem::
 
 Mayhem::ECS::GameObject::GameObject(std::string name, Components::Transform transform): name(name), uuid(Mayhem::Utils::UUID()) {
     printf("Created GameObject -> : %s UUID: %s\n", this->name.c_str(), this->uuid.id().c_str());
-
+    
     this->transform->position = transform.position;
     this->transform->scale = transform.scale;
     this->transform->rotation = Math::Vector3f(1.0f, 1.0f, 1.0f);
-
+    
     this->components[typeid(Components::Transform)] = this->transform;
 }
 

@@ -29,7 +29,7 @@ namespace Mayhem {
                 };
 
                 STATE state = STATE::DEFAULT;
-                    
+
                 GameObject(std::string name);
                 GameObject(std::string name, Components::Transform transform);
 

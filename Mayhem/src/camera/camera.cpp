@@ -76,7 +76,6 @@ Mayhem::ECS::PerspectiveCamera::PerspectiveCamera(Math::Vector3f pos, float fov,
 
     projectionMatrix = glm::mat4(1.0f);
     projectionMatrix = projectionMatrix = glm::perspective(glm::radians(fov), x / y, 0.1f, 100.0f);
-
 }
 
 void Mayhem::ECS::PerspectiveCamera::update() {
@@ -86,16 +85,26 @@ void Mayhem::ECS::PerspectiveCamera::update() {
     viewMatrix = glm::lookAt(glm::vec3(pos.x, pos.y, pos.z), cameraFront + glm::vec3(pos.x, pos.y, pos.z), cameraUp);
 
     projectionMatrix = glm::mat4(1.0f);
-    projectionMatrix = glm::perspective(glm::radians(fov), aspectX / aspectY, 0.1f, 100.0f);
+    projectionMatrix = glm::perspective(glm::radians(fov), aspectX / aspectY, 0.1f, 1000.0f);
 
     inverseViewMatrix = glm::inverse(viewMatrix);
+
     inverseProjectionMatrix = glm::inverse(projectionMatrix);
 }
 
 Mayhem::Math::Vector3f Mayhem::ECS::PerspectiveCamera::ScreenPointToRay(Mayhem::Math::Vector3f point) {
-    glm::vec3 worldPos = glm::unProject(glm::vec3(point.x, -point.y, point.z), viewMatrix, projectionMatrix, glm::vec4(0.0f, 0.0f, aspectX, aspectY));
+    /* glm::vec3 pointNds = glm::vec3((2.0f * point.x) / aspectX - 1.0f, (2.0f * point.y) / aspectY - 1.0f, 1.0f); */
+    /* glm::vec4 rayClip = glm::vec4(pointNds.x, pointNds.y, -1.0f, 1.0f); */
+    /* glm::vec4 rayEye = inverseProjectionMatrix * rayClip; */
+    /* rayEye = glm::vec4(rayEye.x, rayEye.y, -1.0f, 0.0f); */
+    /* glm::vec3 worldPos = (inverseViewMatrix * rayEye); */
+    /* glm::normalize(worldPos); */
 
-    return Math::Vector3f(worldPos.x, worldPos.y, worldPos.z);
+    /* /1* glm::vec3 worldPos = glm::unProject(glm::vec3(point.x, -point.y, point.z), viewMatrix, projectionMatrix, glm::vec4(0.0f, 0.0f, aspectX, aspectY)); *1/ */
+
+    /* return Math::Vector3f(worldPos.x, -worldPos.y, worldPos.z); */
+
+    return Math::Vector3f();
 }
 
 glm::mat4 Mayhem::ECS::PerspectiveCamera::GetViewMatrix() {

@@ -13,8 +13,8 @@ namespace Mayhem {
             class Rect : public BaseSprite {
                 private:
                     unsigned int VAO, VBO, EBO;
-                    unsigned int indices[6];
-                    float vertices[28];
+                    Vertex* vertices;
+                    uint8_t indices[6];
                        
                     void generateVertices();
                     void generateIndices();
